@@ -6,7 +6,7 @@ import jakarta.persistence.Persistence;
 
 public class EditorialDAO {
 
-    private final EntityManagerFactory emf = Persistence.createEntityManagerFactory("ViveroPU");
+    private final EntityManagerFactory emf = Persistence.createEntityManagerFactory("LiberiaPU");
     private final EntityManager em = emf.createEntityManager();
 
     public void guardarEditorial(Editorial editorial) throws Exception {
@@ -14,7 +14,7 @@ public class EditorialDAO {
         em.persist(editorial);
         em.getTransaction().commit();
     }
-    public void modificarEditorial()
+
     public void eliminarEditorial(Integer id) throws Exception {
         Editorial editorial = buscarEditorial(id);
         em.getTransaction().begin();
