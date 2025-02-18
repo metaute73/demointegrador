@@ -1,5 +1,6 @@
-package com.egg.identidades;
+package com.egg.entidades;
 
+import jakarta.persistence.*;
 @Entity
 @Table(name = "libros")
 public class Libro {
@@ -50,59 +51,59 @@ public class Libro {
         this.editorial = editorial;
     }
 
-    public getIsbn() {
+    public long getIsbn() {
         return isbn;
     }
 
-    public setIsbn(Long isbn) {
+    public void setIsbn(Long isbn) {
         this.isbn = isbn;
     }
 
-    public getTitulo() {
+    public String getTitulo() {
         return titulo;
     }
 
-    public setTitulo(String titulo) {
+    public void setTitulo(String titulo) {
         this.titulo = titulo;
     }
 
-    public getAnio() {
+    public Integer getAnio() {
         return anio;
     }
 
-    public setAnio(Integer anio) {
+    public void setAnio(Integer anio) {
         this.anio = anio;
     }
 
-    public getEjemplares() {
+    public Integer getEjemplares() {
         return ejemplares;
     }
 
-    public setEjemplares(Integer ejemplares) {
+    public void setEjemplares(Integer ejemplares) {
         this.ejemplares = ejemplares;
     }
 
-    public getAlta() {
+    public boolean getAlta() {
         return alta;
     }
 
-    public setAlta(Boolean alta) {
+    public void setAlta(Boolean alta) {
         this.alta = alta;
     }
 
-    public getAutor() {
+    public Autor getAutor() {
         return autor;
     }
 
-    public setAutor(Autor autor) {
+    public void setAutor(Autor autor) {
         this.autor = autor;
     }
 
-    public getEditorial() {
+    public Editorial getEditorial() {
         return editorial;
     }
 
-    public setEditorial(Editorial editorial) {
+    public void setEditorial(Editorial editorial) {
         this.editorial = editorial;
     }
 }
