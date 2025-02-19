@@ -1,5 +1,10 @@
 package com.egg.persistencia;
+
+import java.util.List;
+
 import com.egg.entidades.Editorial;
+import com.egg.entidades.Libro;
+
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityManagerFactory;
 import jakarta.persistence.Persistence;

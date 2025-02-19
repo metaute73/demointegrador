@@ -1,5 +1,7 @@
 package com.egg.persistencia;
 
+import java.util.List;
+
 import com.egg.entidades.Libro;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityManagerFactory;
@@ -67,5 +69,15 @@ public class LibroDAO {
     public Libro buscarLibroPorTitulo(String titulo){
         String query = "SELECT l FROM Libro l WHERE l.titulo = :param";
         return em.createQuery(query, Libro.class).setParameter("param", titulo).getSingleResult();
+    }
+
+    public List<Libro> buscarLibroPorEditorial(String editorial) {
+        String query = "SELECT l FROM Libro l WHERE l.editorial.nombre = :nombreEditorial";
+        return em.createQuery(query, Libro.class).setParameter("nombreEditorial", editorial).getResultList();
+    }
+
+    public List<Libro> buscarLibroPorAutor(String autor) {
+        String query = "SELECT l FROM Libro l WHERE l.autor.nombre = :nombreAutor";
+        return em.createQuery(query, Libro.class).setParameter("nombreAutor", autor).getResultList();
     }
 }

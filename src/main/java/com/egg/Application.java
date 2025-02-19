@@ -21,6 +21,9 @@ public class Application {
         /* 
         miLibro.CrearLibro("La venganza del León", 2007, 7, false, 1, 1);
         */
-        miLibro.buscarLibroPorTitulo("La venganza del León");
+        //miLibro.CrearLibro("La venganza del León 2", 2008, 7, false, 1, 1);
+        //miLibro.CrearLibro("La venganza del León 3", 2009, 7, false, 1, 1);
+        //miLibro.buscarLibroPorTitulo("La venganza del León");
+        miLibro.buscarLibroPorEditorial("Edi 1");
     }
 }
