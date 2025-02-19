@@ -22,7 +22,11 @@ public class Autor {
     private Boolean alta;
 
     public Autor(){
-        
+    }
+
+    public Autor(String nombre, Boolean alta) {
+        this.nombre = nombre;
+        this.alta = alta;
     }
 
     public Integer getId() {

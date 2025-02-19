@@ -22,7 +22,11 @@ public class Editorial {
     private Boolean alta;
 
     public Editorial(){
-        
+    }
+
+    public Editorial(String nombre, Boolean alta) {
+        this.nombre = nombre;
+        this.alta = alta;
     }
 
     public Integer getId() {

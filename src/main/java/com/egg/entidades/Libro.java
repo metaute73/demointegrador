@@ -7,7 +7,7 @@ public class Libro {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "isbn")
-    private Long isbn;
+    private long isbn;
 
     @Column(name = "titulo")
     private String titulo;
@@ -41,7 +41,7 @@ public class Libro {
         this.editorial = editorial;
     }
 
-    public Libro(Long isbn, String titulo, Integer anio, Integer ejemplares, Boolean alta, Autor autor, Editorial editorial) {
+    public Libro(long isbn, String titulo, Integer anio, Integer ejemplares, Boolean alta, Autor autor, Editorial editorial) {
         this.isbn = isbn;
         this.titulo = titulo;
         this.anio = anio;
