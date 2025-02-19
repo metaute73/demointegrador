@@ -15,7 +15,7 @@ public class Editorial {
     @Column(name = "id")
     private Integer id;
 
-    @Column(name = "nombre", length = 30)
+    @Column(name = "nombre", length = 30, unique = true)
     private String nombre;
 
     @Column(name = "alta")

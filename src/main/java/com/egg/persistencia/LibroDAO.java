@@ -63,4 +63,9 @@ public class LibroDAO {
             em.close();
         }
     }
+
+    public Libro buscarLibroPorTitulo(String titulo){
+        String query = "SELECT l FROM Libro l WHERE l.titulo = :param";
+        return em.createQuery(query, Libro.class).setParameter("param", titulo).getSingleResult();
+    }
 }

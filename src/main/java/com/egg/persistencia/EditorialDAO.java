@@ -6,7 +6,7 @@ import jakarta.persistence.Persistence;
 
 public class EditorialDAO {
 
-    private final EntityManagerFactory emf = Persistence.createEntityManagerFactory("LiberiaPU");
+    private final EntityManagerFactory emf = Persistence.createEntityManagerFactory("LibreriaPU");
     private final EntityManager em = emf.createEntityManager();
 
     public void guardarEditorial(Editorial editorial) throws Exception {

@@ -27,6 +27,7 @@ public class LibroServicio {
             miLibro.setAlta(alta);
             miLibro.setAutor(autorServicio.buscarAutor(autor));
             miLibro.setEditorial(editorialServicio.buscarEditorial(editorial));
+            guardarLibro(miLibro);
 
         } catch (Exception e) {
             System.out.println(e.toString() + "No se guardo el nuevo autor de manera correcta");
@@ -52,6 +53,18 @@ public class LibroServicio {
             System.out.println(libroRequerido);
         } catch (Exception e) {
             System.out.println(e.getMessage());
+        }
+    }
+
+    public void buscarLibroPorTitulo(String titulo){
+        try{
+            if (titulo == null){
+                throw new Exception();
+            }
+            Libro libroB = libroDAO.buscarLibroPorTitulo(titulo);
+            System.out.println(libroB);
+        }catch(Exception e){
+            System.out.println("System.out.println(\"El título del libro no puede ser vacío " + e.getMessage());
         }
     }
 }
