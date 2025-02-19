@@ -43,5 +43,8 @@ public class AutorServicio {
             System.out.println("El autor no puede ser vacío");
         }
     }
+    public Autor buscarAutor(Integer id){
+        return daoAutor.buscarAutor(id);
+    }
     
 }
